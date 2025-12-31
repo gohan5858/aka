@@ -1,0 +1,25 @@
+[package]
+name = "aka"
+version = "0.1.0"
+edition = "2024"
+authors = ["gohan5858"]
+repository = "https://github.com/gohan5858/aka"
+
+[dependencies]
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
+clap = { version = "4.0", features = ["derive"] }
+redb = "3.1.0"
+anyhow = "1.0.0"
+dirs = "6.0.0"
+thiserror = "2.0.17"
+
+[dev-dependencies]
+assert_cmd = "2.0"
+predicates = "3.0"
+tempfile = "3.24.0"
+rstest = "0.26.1"
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
