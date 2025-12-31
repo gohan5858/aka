@@ -68,6 +68,29 @@ aka list
 aka
 ```
 
+### 履歴からの追加（fzf 連携）
+
+`fzf` を使って履歴からコマンドを選び、エイリアスとして登録します。
+
+```bash
+# 履歴から選択して登録（エイリアス名は対話入力）
+aka add
+
+# スコープ付きで登録
+aka add --scope . --recursive
+
+```
+
+#### 必要な依存
+
+- `fzf` がインストールされている必要があります。
+
+#### 環境変数
+
+- `AKA_FZF_BIN`: fzf のパス（例: `/opt/homebrew/bin/fzf`）
+- `AKA_HISTORY_FILE`: 読み込む履歴ファイルのパス
+- `HISTFILE`: `AKA_HISTORY_FILE` 未設定時に参照
+
 ### 削除
 
 ```bash

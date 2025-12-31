@@ -29,6 +29,15 @@ pub enum AkaError {
     #[error("Alias not found: {0}")]
     AliasNotFound(String),
 
+    #[error("No definition found for alias '{0}' in scope '{1}'")]
+    ScopeNotFoundInAlias(String, String),
+
+    #[error("Invalid scope path: {0}")]
+    InvalidScopePath(String),
+
+    #[error("Operation cancelled")]
+    OperationCancelled,
+
     #[error("Unknown error: {0}")]
     Other(#[from] anyhow::Error),
 }

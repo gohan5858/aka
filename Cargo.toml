@@ -1,6 +1,6 @@
 [package]
 name = "aka"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 authors = ["gohan5858"]
 repository = "https://github.com/gohan5858/aka"
@@ -11,7 +11,10 @@ clap = { version = "4.0", features = ["derive"] }
 redb = "3.1.0"
 anyhow = "1.0.0"
 dirs = "6.0.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
 thiserror = "2.0.17"
+owo-colors = { version = "4.1", features = ["supports-colors"] }
 
 [dev-dependencies]
 assert_cmd = "2.0"
